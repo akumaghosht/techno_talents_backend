@@ -1,0 +1,32 @@
+const mongoose=require("mongoose")
+const college_schema=new mongoose.Schema({
+    college_name:{
+        type:String,
+        required:true
+    },
+    college_description:{
+        type:String,
+        required:true
+    },
+    estd_year:{
+        type:Number,
+        required:true
+    },
+    degree_offered:{
+        type:[String],
+        required:true,
+    },
+    country_of_origin:{
+        type:String,
+        required:true
+    },
+    courses_offered:{
+        type:[String],
+        required:true
+    },
+    college_images:{
+        type:[String],
+        required:false
+    }
+})
+module.exports=mongoose.model("college_schema",college_schema)

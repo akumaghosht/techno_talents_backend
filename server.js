@@ -7,6 +7,10 @@ connectdb()
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
+app.use("/coaching",require("./routes/coaching"))
+app.use("/hostels",require("./routes/hostel"))
+app.use("/colleges",require("./routes/college"))
+app.use("/listing",require("./routes/listing"))
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
