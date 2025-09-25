@@ -1,7 +1,7 @@
 {
-    coaching_name: "FIITJEE",
-    coaching_description: "Coaching for IIT-JEE",
-    coaching_category: ["IIT-JEE"],
-    offline_locations: ["Delhi","Mumbai","Kolkata","Pune"],
-    coaching_image:["asdfaaaervwaerabasevraservavw"]
+    hostel_name: "ABC hostels",
+    hostel_description: "hostel services by ABC",
+    hostel_address: "Kolkata",
+    hostel_image:["dkfljavavsdfwevw"]
+
 }

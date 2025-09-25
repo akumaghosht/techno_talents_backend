@@ -13,7 +13,7 @@ list_partner=async(req,res)=>{
     }
     else if(type=="hostel"){
         const newhostel=req.body
-        if(newhostel.hostel_name==null || newhostel.hostel_description==null || newhostel.address==null){
+        if(newhostel.hostel_name==null || newhostel.hostel_description==null || newhostel.hostel_address==null){
             res.json({message:"required fields are necessary"})
         }
         const addcoaching= await Hostels.create(newhostel)
