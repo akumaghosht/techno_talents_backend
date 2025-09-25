@@ -1,5 +1,6 @@
 const Coachings=require("../models/coaching_schema")
 const Hostels=require("../models/hostel_schema")
+const Colleges=require("../models/college_schema")
 list_partner=async(req,res)=>{
     const type=req.params.partnertype
     if(type=="coaching"){
@@ -16,7 +17,15 @@ list_partner=async(req,res)=>{
             res.json({message:"required fields are necessary"})
         }
         const addcoaching= await Hostels.create(newhostel)
-        res.json({message:"Coaching listed"})
+        res.json({message:"Hostel listed"})
+    }
+    else if(type=="college"){
+        const newcollege=req.body
+        if(newcollege.college_name==null || newcollege.college_description==null || newcollege.estd_year==null || newcollege.degree_offered==null || newcollege.country_of_origin==null || newcollege.courses_offered==null){
+            res.json({message:"required fields are necessary"})
+        }
+        const addcoaching= await Hostels.create(newhostel)
+        res.json({message:"College listed"})
     }
     else{
         res.json({message:"no category found"})
