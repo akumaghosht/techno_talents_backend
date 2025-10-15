@@ -7,4 +7,4 @@ const entertainment_schema = new mongoose.Schema({
     price:Number,
     organizer:String
 })
-module.exports = mongoose.model("coaching_schema",entertainment_schema)
+module.exports = mongoose.model("entertainment_schema",entertainment_schema)
