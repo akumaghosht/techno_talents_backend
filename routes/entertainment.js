@@ -1,0 +1,12 @@
+const express=require("express")
+const router=express.Router()
+const {get_fests,get_concerts,get_otts,get_gyms,get_clubs,get_meetups,get_workshops,get_hackathons}=require("../controller/entertainment_controls")
+router.get("/fests",get_fests)
+router.get("/concerts",get_concerts)
+router.get("/ott",get_otts)
+router.get("/gym",get_gyms)
+router.get("/club",get_clubs)
+router.get("/meetup",get_meetups)
+router.get("/workshop",get_workshops)
+router.get("/hackathon",get_hackathons)
+module.exports=router

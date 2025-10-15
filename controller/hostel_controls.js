@@ -9,3 +9,4 @@ const get_hostel=async(req,res)=>{
     res.json(hostel_detail)
 }
 module.exports={get_hostels,get_hostel}
+ 

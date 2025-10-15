@@ -10,8 +10,10 @@ const get_college=async(req,res)=>{
 }
 const get_indian_collegees=async(req,res)=>{
     const college_details=await Colleges.find({country_of_origin:{$eq: "India"}})
+    res.json(college_details)
 }
 const get_global_collegees=async(req,res)=>{
     const college_details=await Colleges.find({country_of_origin:{$ne: "India"}})
+    res.json(college_details)
 }
 module.exports={get_colleges,get_college,get_indian_collegees,get_global_collegees}
